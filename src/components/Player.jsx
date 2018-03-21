@@ -1,12 +1,13 @@
 import React from 'react';
-import Input from './Input';
-import Score from './Score';
+import Input from '../containers/Input';
+import Score from '../containers/Score';
 
 //Player component to handle name and score
-const Player = ({ player }) => (
+
+const Player = ({ player, id }) => (
 	<div className="col-sm-6">
-		<Input name={ player.get('name') }/>
-		<Score score={ player.get('score') }/>
+		<Input id ={ id } value={ player.get('name') }/>
+		<Score id ={ id } score={ player.get('score') }/>
 	</div>
 );
 

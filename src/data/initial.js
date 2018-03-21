@@ -1,4 +1,4 @@
-import { Map } from "immutable";
+import { Map, List } from "immutable";
 
 //Set up initial object
 //Array of 2 players with their initial name and score

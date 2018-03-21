@@ -4,7 +4,6 @@ import PingPong from "./containers/PingPong";
 class App extends Component {
 	render() {
 		return (
-    	
     		<PingPong />
     	);
 	}

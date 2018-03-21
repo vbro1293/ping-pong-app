@@ -1,10 +1,10 @@
 import React from 'react';
 
-//Form input for players name, with name being passed in as a prop
+//Form input for players name, with name being passed in as a prop, onChange event handler being passed down for input change
 
-const Input = ({ name }) => (
+const Input = ({ value, onChange }) => (
 	<div className="form-group">
-		<input className="form-control" placeholder="Name" value = { name } />
+		<input className="form-control" placeholder="Name" onChange={ onChange } value = { value } />
 	</div>
 );
 
