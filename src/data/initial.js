@@ -8,10 +8,12 @@ const initial = Map({
         Map({
             name: "",
             score: 0,
+            serving: true,
         }),
         Map({
             name: "",
             score: 0,
+            serving: false,
         }),
     ]),
 });
