@@ -7,8 +7,7 @@ import Score from '../containers/Score';
 const Player = ({ player, id }) => (
 	<div className="player-section">
 		<Input id ={ id } value={ player.get('name') }/>
-		<Score id ={ id } score={ player.get('score') }/>
-		{ player.get("serving") ? <p className="serving">🏓</p> : null }
+		<Score id ={ id } score={ player.get('score')} serving={ player.get("serving")} />
 	</div>
 );
 
