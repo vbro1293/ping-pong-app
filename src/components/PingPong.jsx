@@ -1,15 +1,14 @@
 import React from 'react';
-import Player from './Player';
+import Players from './Players';
+import Winner from './Winner';
 
 //Map over the players creating a input and score component for each
 //Passing in the Players as a prop and deconstructing to get each players name and score
 //id for identifying each player (key is for React only)
 
-const PingPong = ({ players, id }) => (
-	<div className="players-container">
-		{ players.map((player, i) => (
-			<Player key={ i } id ={ i } player={ player } />
-		))}
+const PingPong = ({ players, winner }) => (
+	<div>
+		{ winner ? <Winner winner={ winner }/> : <Players players={ players }/> }
 	</div>
 )
 

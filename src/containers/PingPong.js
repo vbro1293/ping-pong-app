@@ -5,6 +5,7 @@ import PingPong from '../components/PingPong';
 
 const mapStateToProps = state => ({
 	players: state.get('players'),
+	winner: state.get('players').filter(p => p.get("won")).first(),
 })
 
 export default connect(mapStateToProps)(PingPong);

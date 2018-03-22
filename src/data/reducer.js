@@ -25,12 +25,24 @@ const updateServer = state => {
 			player.set("serving", i === server)))
 }
 
+//Detect winner
+const updateWinner = state => {
+	return state.update("players", players =>
+		players.map(player =>
+			player.set("won", player.get("score") >= endOn)
+		)
+	)
+}
+
 //switch statement to call function depending on action type
 const state = (state, action) => {
 	switch (action.type){
+
 		case UPDATE_NAME: return updateName(state, action);
-//chain functions- update score and the returned state is then used for updating the server
-		case UPDATE_SCORE: return updateServer(updateScore(state, action));
+		
+		//chain functions- update score and the returned state is then used for updating the server
+		case UPDATE_SCORE: return updateWinner(updateServer(updateScore(state, action)));
+
 		default: return state;
 	}
 }
