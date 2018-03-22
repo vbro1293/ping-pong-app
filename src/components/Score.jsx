@@ -6,8 +6,8 @@ import React from "react";
 
 const Score = ({ score, onClick }) => (
 	<div>
-		<p className="well">{ score }</p>
-		<button className="btn btn-primary" onClick={ onClick }>Add</button>
+		<p className="score">{ score }</p>
+		<button className="btn" onClick={ onClick }>Add</button>
 	</div>
 );
 

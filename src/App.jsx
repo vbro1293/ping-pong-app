@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import PingPong from "./containers/PingPong";
+import PageHeading from './components/PageHeading';
 
 class App extends Component {
 	render() {
 		return (
-    		<PingPong />
+			<div>
+				<PageHeading title="PongPing" subtitle="🏓"/>
+	    		<PingPong />
+	    		</div>
     	);
 	}
 }

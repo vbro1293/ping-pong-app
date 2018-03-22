@@ -6,7 +6,7 @@ import Player from './Player';
 //id for identifying each player (key is for React only)
 
 const PingPong = ({ players, id }) => (
-	<div className="row">
+	<div className="players-container">
 		{ players.map((player, i) => (
 			<Player key={ i } id ={ i } player={ player } />
 		))}
