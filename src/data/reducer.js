@@ -1,8 +1,15 @@
-import { UPDATE_NAME, UPDATE_SCORE } from './actions';
-//Variables for number of serves each and winning score
+import { UPDATE_NAME, UPDATE_SCORE, RESET } from './actions';
+import initial from './initial';
 
+
+//========VARIABLES
+
+//Variables for number of serves each and winning score
 const servesEach = 5;
 const endOn = 21;
+
+
+//========FUNCTIONS
 
 //Update specified players name
 const updateName = (state, { player, name }) => state.setIn(["players", player, "name"], name);
@@ -34,6 +41,13 @@ const updateWinner = state => {
 	)
 }
 
+//Reset start to initial
+const reset = () => initial;
+
+
+
+//==========SWITCH FOR CALLING FUNCTIONS FOR SPECIFIC ACTIONS
+
 //switch statement to call function depending on action type
 const state = (state, action) => {
 	switch (action.type){
@@ -42,6 +56,8 @@ const state = (state, action) => {
 		
 		//chain functions- update score and the returned state is then used for updating the server
 		case UPDATE_SCORE: return updateWinner(updateServer(updateScore(state, action)));
+
+		case RESET: return reset();
 
 		default: return state;
 	}

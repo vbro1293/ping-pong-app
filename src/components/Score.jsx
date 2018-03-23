@@ -7,7 +7,7 @@ import React from "react";
 const Score = ({ score, onClick, serving }) => (
 	<div>
 		<p className="score">{serving ? "🏓" : null} { score } {serving ? "🏓" : null}</p>
-		<button className="btn" onClick={ onClick }>Add</button>
+		<button className="btn" onClick={ onClick }>ADD</button>
 	</div>
 );
 

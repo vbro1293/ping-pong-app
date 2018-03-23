@@ -3,7 +3,6 @@ import Input from '../containers/Input';
 import Score from '../containers/Score';
 
 //Player component to handle name, score and if serving
-
 const Player = ({ player, id }) => (
 	<div className="player-section">
 		<Input id ={ id } value={ player.get( 'name' )}/>

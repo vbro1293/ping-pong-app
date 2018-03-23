@@ -21,8 +21,12 @@ h1, h2 {
 .btn {
 	padding: 5px 20px;
 	background: hsla(0, 0%, 43%, 1);
+	color: hsla(0,100%, 100%, 1);
 }
 .score {
 	font-weight: bold;
 	font-size: 1.5em;
+}
+.end{
+	text-align: center;
 }

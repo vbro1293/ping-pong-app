@@ -1,6 +1,6 @@
 import React from 'react';
 import Players from './Players';
-import Winner from './Winner';
+import Winner from '../containers/Winner';
 
 //Map over the players creating a input and score component for each
 //Passing in the Players as a prop and deconstructing to get each players name and score
